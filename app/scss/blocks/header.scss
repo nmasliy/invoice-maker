@@ -1,0 +1,47 @@
+.header {
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    &__menu-btn {
+        display: none;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+        li {
+            position: relative;
+            padding-bottom: 4px;
+
+            & + li {
+                margin-left: 35px;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 0;
+                background-color: $blue;
+                transition: width ease-out .2s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

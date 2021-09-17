@@ -1,0 +1,135 @@
+// USER VARIABLES SECTION
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$blue: #00a2e8;
+$green: #22b14c;
+$main: #4f4f4f;
+$gray: #333333;
+// FONTS
+
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+            url("../fonts/#{$file_name}.ttf") format("format('truetype')"),
+            url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// GENERAL DOCUMENT STYLES
+
+input,
+textarea {
+    outline: transparent;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 145%; // === 26px
+    color: $main;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.title {
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+// Input number fix
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+button {
+    outline: transparent;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+.container {
+    max-width: 1180px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+
+    body {
+        overflow: hidden;
+    }
+}

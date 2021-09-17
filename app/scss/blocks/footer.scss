@@ -1,0 +1,48 @@
+.footer {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 33px;
+    }
+
+    &__col {
+        &:first-child {
+            max-width: 300px;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.16px;
+        color: #000;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 700;
+        margin: 0 -15px;
+
+        li {
+            position: relative;
+            margin: 0 15px;
+            padding: 5px 0;
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: $main;
+            }
+        }
+    }
+
+    
+}
