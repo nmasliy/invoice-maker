@@ -40,7 +40,7 @@
             margin-left: 15px;
         }
         img {
-            max-width: 168px;
+            width: 168px;
         }
     }
 
@@ -55,6 +55,7 @@
         width: calc(25% - 30px);
         margin: 0 15px;
         list-style: none;
+        padding-left: 0;
 
         a {
             display: block;

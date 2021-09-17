@@ -34,6 +34,18 @@
    }
 }
 
+@media (max-width: 1280px) {
+   h1 {
+      font-size: 34px;
+   }
+   h2 {
+      font-size: 26px;
+   }
+   h5 {
+      font-size: 19px;
+   }
+}
+
 @media (max-width: 1200px) {
    .header {
       min-height: 80px;
@@ -53,6 +65,18 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .lead {
+      padding: 50px 0;
+   }
+   .about {
+      padding: 70px 0;
+      &__item {
+         margin: 0 -22px 80px -22px;
+      }
+   }
+   .main {
+      padding-top: 170px;
+   }
    .header {
       &.active {
          height: 100vh;
@@ -129,9 +153,115 @@
          }
       }
    }
+   .footer {
+      &__info {
+         width: 21%;
+         margin-right: 40px;
+      }
+      &__nav {
+         width: 79%;
+         margin: 0 -8px;
+      }
+      &__list {
+         width: calc(25% - 16px);
+         margin: 0 8px;
+      }
+   }
 }
 
 @media (max-width: 768px) {
+   .footer {
+      &__inner {
+         flex-direction: column-reverse;
+      }
+      &__info {
+         width: 100%;
+         margin-right: 0;
+      }
+      &__nav {
+         width: 100%;
+         margin: 0 -8px;
+         margin-bottom: 40px;
+      }
+      &__list {
+         width: calc(25% - 16px);
+         margin: 0 8px;
+      }
+   }
+   .about {
+      &__item {
+         margin: 0 -22px 50px -22px;
+      }
+   }
+}
 
+@media (max-width: 700px) {
+   .about {
+      &__img {
+         &::before {
+            border-radius: 40px;
+            border-width: 7px;
+         }
+         img {
+            border-radius: 40px;
+            width: 100%;
+         }
+      }
+      &__item {
+         flex-direction: column-reverse;
+         margin-left: 0;
+         margin-right: 0;
+         &:nth-child(even) {
+            flex-direction: column-reverse;
+         }
+      }
+      &__img-wrapper {
+         width: 100%;
+         margin: 0;
+         margin-bottom: 30px;
+      }
+      &__info {
+         width: 100%;
+         margin: 0;
+      }
+   }
 } 
+
+@media (max-width: 640px) {
+   .footer {
+      &__list {
+         width: calc(50% - 16px);
+      }
+   }
+   .about {
+      &__item {
+         margin: 0;
+         margin-bottom: 50px;
+      }
+   }
+}
 // /Tablets 
+
+// Mobile phones
+@media (max-width: 370px) {
+   .footer {
+      &__inner {
+         padding: 50px 0;
+      }
+      &__text {
+         margin-bottom: 40px;
+      }
+      &__list {
+         width: 100%;
+         margin: 0;
+         margin-bottom: 30px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   } 
+   .btn--shadow {
+      min-width: 200px;
+   }
+}
+// /Mobile phones
