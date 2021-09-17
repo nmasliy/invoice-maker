@@ -131,7 +131,7 @@ function images() {
 function buildcopy() {
     return src(
         [
-            "{" + sourceFolder + "js," +  sourceFolder + "/css}/*.min.*",
+            "{" + sourceFolder + "/js," +  sourceFolder + "/css}/*.min.*",
             sourceFolder + "/images/**/*.*",
             "!" + sourceFolder + "/images/src/**/*",
             sourceFolder + "/fonts/**/*",
