@@ -92,7 +92,7 @@ function fonts() {
         .pipe(dest(sourceFolder + "/fonts"));
 }
 
-function fontsStyle(done) {
+function fontsStyle() {
     let file_content = fs.readFileSync(sourceFolder + "/scss/_fonts.scss");
     if (file_content == "") {
         fs.writeFile(sourceFolder + "/scss/_fonts.scss", "", cb);
@@ -110,7 +110,6 @@ function fontsStyle(done) {
             }
         });
     }
-	done();
 }
 
 function cb() {}

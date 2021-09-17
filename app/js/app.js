@@ -31,5 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    const toggleVisibleAboutContent = () => {
+        const $buttons = document.querySelectorAll('.info-block__btn');
+
+        $buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const [SHOW_MORE, SHOW_LESS] = ['Show more', 'Show less'];
+                const parent = this.closest('.info-component');
+                const buttonText = btn.querySelector('span');
+
+                if (parent.classList.contains('opened')) {
+                    parent.classList.remove('opened');
+                    buttonText.textContent = SHOW_MORE;
+                } else {
+                    parent.classList.add('opened');
+                    buttonText.textContent = SHOW_LESS;
+                }
+            })
+        }) 
+    }
+
+    toggleVisibleAboutContent();
+
     // initMenu();
 });

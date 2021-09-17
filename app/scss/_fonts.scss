@@ -1,10 +1,23 @@
-@include font("Graphik-Medium", "Graphik-Medium", "400", "normal");
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.ttf") format("truetype"),
+            url("../fonts/#{$file_name}.woff") format("woff"),
+            url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@include font("Graphik-Medium", "Graphik-Medium", "500", "normal");
 @include font("Graphik-Regular", "Graphik-Regular", "400", "normal");
-@include font("Graphik-Semibold", "Graphik-Semibold", "400", "normal");
+@include font("Graphik-Semibold", "Graphik-Semibold", "600", "normal");
+@include font("SFProDisplay-Bold", "SFProDisplay-Bold", "700", "normal");
 @include font("ProductSans-Regular", "ProductSans-Regular", "400", "normal");
-@include font("SFProDisplay-Bold", "SFProDisplay-Bold", "400", "normal");
-@include font("SFProDisplay-Heavy", "SFProDisplay-Heavy", "400", "normal");
-@include font("SFProDisplay-Medium", "SFProDisplay-Medium", "400", "normal");
+@include font("SFProDisplay-Medium", "SFProDisplay-Medium", "500", "normal");
+@include font("SFProDisplay-Heavy", "SFProDisplay-Heavy", "900", "normal");
 @include font("SFProDisplay-Regular", "SFProDisplay-Regular", "400", "normal");
-@include font("SFProDisplay-Semibold", "SFProDisplay-Semibold", "400", "normal");
-@include font("SFProRounded-Medium", "SFProRounded-Medium", "400", "normal");
+@include font("SFProRounded-Medium", "SFProRounded-Medium", "500", "normal");
+@include font("SFProDisplay-Semibold", "SFProDisplay-Semibold", "600", "normal");
+@include font("SFRounded-Medium", "SFRounded-Medium", "500", "normal");

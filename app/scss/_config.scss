@@ -1,25 +1,15 @@
 // USER VARIABLES SECTION
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$blue: #00a2e8;
-$green: #22b14c;
-$main: #4f4f4f;
-$gray: #333333;
-// FONTS
-
-@mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-        font-family: $font_name;
-        font-display: swap;
-        src: url("../fonts/#{$file_name}.woff") format("woff"),
-            url("../fonts/#{$file_name}.ttf") format("format('truetype')"),
-            url("../fonts/#{$file_name}.woff2") format("woff2");
-        font-weight: #{$weight};
-        font-style: #{$style};
-    }
-}
+$blue: rgba(0, 122, 255, 0.1);
+$blueHover: rgba(0, 122, 255, 0.2);
+$accent: #007AFF;
+$accentHover: rgba(#007AFF, .8);
+$text: #000000;
+$white: #ffffff;
+$background: #F9FAFC;
+$footer:  #25436B;
 
 // GENERAL DOCUMENT STYLES
-
 input,
 textarea {
     outline: transparent;
@@ -38,10 +28,12 @@ body {
 
 body {
     min-width: 320px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Graphic-Regular", sans-serif;
+    font-weight: normal;
     font-size: 18px;
     line-height: 145%; // === 26px
-    color: $main;
+    color: $text;
+    background: $background;
 }
 
 *,
@@ -50,47 +42,37 @@ body {
     box-sizing: inherit;
 }
 
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-
-.main {
-    flex: 1 1 auto;
-}
-
-.title {
-}
-
-.btn {
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-}
-
 ul,
 li {
     padding: 0;
     margin: 0;
 }
 
-ul li {
-    list-style: none;
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    margin: 15px 0;
+    line-height: 120%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    font-weight: normal;
+h1,h2,h3,h4 {
+    font-weight: 600;
+    font-family: 'Graphik-Semibold', sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 118%;
+}
+
+h5 {
+    font-size: 22px;
 }
 
 // Input number fix
-
 input[type="number"] {
     -moz-appearance: textfield;
 }
@@ -99,6 +81,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+// /Input number fix
 
 button {
     outline: transparent;
@@ -109,14 +92,12 @@ textarea {
     resize: none;
 }
 
-.container {
-    max-width: 1180px;
-    width: 100%;
-    padding: 0 10px;
-    margin: 0 auto;
+picture {
+    display: flex;
 }
 
 img {
+    display: inline-flex;
     max-width: 100%;
     object-fit: cover;
 }
@@ -126,10 +107,97 @@ a {
     color: inherit;
 }
 
+.logo {
+    display: block;
+}
+
 .overflow-hidden {
     overflow: hidden;
 
     body {
         overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1005px;
+    width: 100%;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+    padding-top: 100px;
+}
+
+.btn {
+    display: inline-block;
+    font-family: 'Graphik-Semibold', sans-serif;
+    font-weight: 600;
+    padding: 10px 30px;
+    text-align: center;
+    background-color: $accent;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: break-spaces;
+    border: none;
+    border-radius: 7px;
+    color: $white;
+    min-width: 110px;
+
+    &--blue {
+        background-color: $blue;
+        color: $accent;
+    }
+
+    &--shadow {
+        padding: 21px 30px;
+        box-shadow: 0px 8px 20px rgba(8, 59, 129, 0.19);
+        border-radius: 10px;
+        min-width: 292px;
+    }
+}
+
+.info-component {
+    &.opened {
+        .info-block__hidden {
+            display: inherit;
+        }
+        .info-block__btn img {
+            transform: rotate(180deg);
+        }
+    }
+}
+.info-block {
+
+    &__content {
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &__text {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        display: inline-block;
+        margin: 15px 0;
+        color: $accent;
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+        img {
+            transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .4s;
+        }
     }
 }

@@ -1,0 +1,12 @@
+.lead {
+    background-color: rgba($text, .02);
+    padding: 95px 0;
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__btn {
+        margin-top: 45px;
+    }
+}

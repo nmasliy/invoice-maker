@@ -1,6 +1,14 @@
 @media (min-width: 1025px) {
    // Hover section
-
+   .btn {
+      transition: background-color .2s;
+      &:hover {
+         background-color: $accentHover;
+      }
+      &--blue:hover {
+         background-color: $blueHover;
+      }
+   }
    // /Hover section
 }
 

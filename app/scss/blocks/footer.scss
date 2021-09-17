@@ -1,37 +1,70 @@
 .footer {
+    background-color: $footer;
+    font-size: 15px;
+
+    &__container {
+        padding: 0 25px;
+        max-width: 1210px;
+        margin: 0 auto;
+    }
 
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 33px;
+        padding: 77px 0;
+        line-height: 20px;
+        color: $white;
     }
 
-    &__col {
-        &:first-child {
-            max-width: 300px;
+    &__info {
+        width: 29%;
+        margin-right: 60px;
+    }
+
+    &__logo {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 60px;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__btn {
+        display: block;
+        &:last-child {
+            margin-left: 15px;
+        }
+        img {
+            max-width: 168px;
         }
     }
 
-    &__copy {
-        text-align: center;
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 24px;
-        letter-spacing: 0.16px;
-        color: #000;
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        width: 71%;
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        font-weight: 700;
-        margin: 0 -15px;
+        width: calc(25% - 30px);
+        margin: 0 15px;
+        list-style: none;
+
+        a {
+            display: block;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
         li {
             position: relative;
-            margin: 0 15px;
-            padding: 5px 0;
             &::after {
                 position: absolute;
                 content: "";
@@ -39,10 +72,30 @@
                 bottom: 0;
                 width: 0;
                 height: 2px;
-                background-color: $main;
+                background-color: $accent;
+            }
+            &:not(.footer__label) {
+                margin-bottom: 15px;
+                font-family: 'Graphik-Medium', sans-serif;
+                font-weight: 500;
             }
         }
     }
 
+    &__label {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    &__bottom {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 35px 0;
+    }
     
+    &__copy {
+        line-height: 160%;
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
+
