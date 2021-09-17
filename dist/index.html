@@ -13,11 +13,27 @@
 <body>
 	<div class="page-wrapper">
 		<header class="header">
+    <div class="header__banner download-banner">
+        <a href="./" class="logo download-banner__logo">
+            <img width="180" src="images/dist/logo-square.svg" alt="Invoice Maker">
+        </a>
+        <!-- Все варианты кнопок в баннере из макета  -->
+        <a href="#" class="download-banner__btn">
+            <img width="121" srcset="images/dist/google-play.png, images/dist/google-play@2x.png 2x" alt="Get in on google play">
+        </a>
+        <!-- <a href="#" class="download-banner__btn btn btn--round">Open in App</a> -->
+        <!-- <a href="#" class="download-banner__btn">
+            <img width="121" srcset="images/dist/app-store.png, images/dist/app-store@2x.png 2x" alt="Download on the app store">
+        </a> -->
+    </div>
     <div class="header__inner">
         <a href="./" class="logo header__logo">
             <img width="217" src="images/dist/logo.svg" alt="Invoice Maker">
         </a>
-        <nav class="header__navigation menu">
+        <nav class="header__navigation">
+            <a href="./" class="logo header__navigation-logo">
+                <img width="217" src="images/dist/logo.svg" alt="Invoice Maker">
+            </a>
             <ul>
                 <li><a href="#">Invoice Generator</a></li>
                 <li><a href="#">Invoice Template</a></li>
@@ -29,6 +45,14 @@
             <div class="header__buttons">
                 <a href="#" class="header__btn btn btn--blue">Login</a>
                 <a href="#" class="header__btn btn">Try it free</a>
+            </div>
+            <div class="header__mobile-buttons">
+                <a href="#" class="header__mobile-btn">
+                    <img width="168" srcset="images/dist/google-play.png, images/dist/google-play@2x.png 2x" alt="Get in on google play">
+                </a>
+                <a href="#" class="header__mobile-btn">
+                    <img width="168" srcset="images/dist/app-store.png, images/dist/app-store@2x.png 2x" alt="Download on the app store">
+                </a> 
             </div>
         </nav>
         <button class="header__menu-btn">

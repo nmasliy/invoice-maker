@@ -111,7 +111,7 @@ a {
     display: block;
 }
 
-.overflow-hidden {
+.block-scroll {
     overflow: hidden;
 
     body {
@@ -141,7 +141,7 @@ a {
     display: inline-block;
     font-family: 'Graphik-Semibold', sans-serif;
     font-weight: 600;
-    padding: 10px 30px;
+    padding: 10px 20px;
     text-align: center;
     background-color: $accent;
     color: inherit;
@@ -153,6 +153,11 @@ a {
     color: $white;
     min-width: 110px;
 
+    &--round {
+        padding: 10px 15px;
+        border-radius: 40px;
+    }
+    
     &--blue {
         background-color: $blue;
         color: $accent;
@@ -164,6 +169,19 @@ a {
         border-radius: 10px;
         min-width: 292px;
     }
+}
+
+.download-banner {
+    font-family: 'Graphik-Medium', 'sans-serif';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 155%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: $background;
+    box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .info-component {

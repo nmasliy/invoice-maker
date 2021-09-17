@@ -1,5 +1,6 @@
 .header {
     background-color: #fff;
+    overflow: hidden;
     position: fixed;
     left: 0;
     top: 0;
@@ -10,6 +11,10 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
+
+    &__banner {
+        display: none;
+    }
 
     &__inner {
         display: flex;
@@ -23,10 +28,59 @@
     &__btn {
         &:last-child {
             margin-left: 10px;
+            padding: 10px 30px;
         }
     }
 
+    &__logo {
+        margin-right: 30px;
+    }
+
     &__menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 12;
+        border: none;
+        border-radius: 7px;
+        background-color: $accent;
+        cursor: pointer;
+        
+        span {
+            display: block;
+            width: 16px;
+            height: 2px;
+            flex-shrink: 0;
+            background-color: $white;
+            transition: .3s ease-in;
+            transform-origin: center;
+        }
+
+        &.active {
+            span {
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:first-child {
+                    transform: rotate(45deg) translate(5px, 4px);
+                }
+                &:last-child {
+                    transform: rotate(-45deg) translate(4px, -3px);
+                }
+            }
+        }
+    }
+
+    &__mobile-buttons {
+        display: none;
+    }
+
+    &__navigation-logo {
         display: none;
     }
 
@@ -34,44 +88,39 @@
         display: flex;
         align-items: center;
         margin-left: auto;
-
+        
         ul {
             display: flex;
             align-items: center;
             list-style: none;
+            flex-wrap: wrap;
+            margin: 0 -25px;
 
             a {
                 display: block;
+                padding-bottom: 5px;
             }
     
         }
 
         li {
             position: relative;
-
-            & + li {
-                margin-left: 50px;
-            }
+            margin: 0 25px;
             &::after {
                 position: absolute;
                 content: "";
                 left: 0;
-                bottom: -4px;
+                bottom: 4px;
                 height: 2px;
                 width: 0;
                 background-color: $accent;
                 transition: width ease-out .2s;
             }
-            &:hover {
-                &::after {
-                    width: 100%;
-                }
-            }
         }
     }
 
     &__buttons {
+        display: flex;
         margin-left: 70px;
     }
-
 }

@@ -2,36 +2,33 @@ import Swiper from "swiper";
 
 document.addEventListener("DOMContentLoaded", function () {
     function initMenu() {
-        const menuBtn = document.querySelector(".header__menu-btn");
-        const menu = document.querySelector(".header__navigation");
-        const navigationLinks = document.querySelectorAll(
-            ".header__navigation li a"
-        );
-        const html = document.querySelector("html");
+        const $html = document.querySelector('html');
+        const $header = document.querySelector('.header');
+        const $headerBtn = document.querySelector('.header__menu-btn');
+        const $navigationItems = document.querySelectorAll('.header__navigation ul>li>a');
+        let isInit = false;
 
-        if (document.documentElement.clientWidth <= 750) {
-            menuBtn.addEventListener("click", function () {
-                menu.classList.toggle("active");
-                menuBtn.classList.toggle("active");
-                html.classList.toggle("overflow-hidden");
-            });
-
-            const menuLists = document.querySelectorAll(".menu__list a");
-            menuLists.forEach((list) => {
-                list.addEventListener("click", function () {
-                    if (list.parentElement.classList.contains("menu__list")) {
-                        if (list.parentElement.classList.contains("open")) {
-                            list.parentElement.classList.remove("open");
-                        } else {
-                            list.parentElement.classList.add("open");
-                        }
-                    }
-                });
-            });
+        const toggleMenu = () => {
+            $headerBtn.classList.toggle('active');
+            $header.classList.toggle('active');
+            $html.classList.toggle('block-scroll');
         }
+
+        const checkScreenWidth = () => {
+            // Активируем меню только на экранах <= 1024
+            if (window.innerWidth <= 1024) {
+                $headerBtn.addEventListener('click', toggleMenu);
+                $navigationItems.forEach(item => item.addEventListener('click', toggleMenu));
+                isInit = true;
+            }
+        }
+
+        window.addEventListener('resize', checkScreenWidth);
+        
+        checkScreenWidth();
     }
 
-    const toggleVisibleAboutContent = () => {
+    function initToggleVisibleAboutContent() {
         const $buttons = document.querySelectorAll('.info-block__btn');
 
         $buttons.forEach(btn => {
@@ -51,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         }) 
     }
+    
+    initMenu();
 
-    toggleVisibleAboutContent();
-
-    // initMenu();
+    initToggleVisibleAboutContent();
 });
