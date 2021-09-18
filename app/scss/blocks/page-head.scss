@@ -1,0 +1,10 @@
+.page-head {
+    background: $grey;
+    &__inner {
+        max-width: 730px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 90px 25px;
+        text-align: center;
+    }
+}

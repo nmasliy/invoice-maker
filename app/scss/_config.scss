@@ -8,7 +8,8 @@ $text: #000000;
 $white: #ffffff;
 $background: #F9FAFC;
 $footer:  #25436B;
-
+$grey: #F4F5F7;
+$phone: #121515;
 // GENERAL DOCUMENT STYLES
 input,
 textarea {
@@ -199,16 +200,18 @@ a {
 
 .info-component {
     &.opened {
-        .info-block__hidden {
-            display: inherit;
+        span.info-block__hidden {
+            display: inline;
         }
-        .info-block__btn img {
+        .info-block__hidden {
+            display: block;
+        }
+        .info-block__btn svg {
             transform: rotate(180deg);
         }
     }
 }
 .info-block {
-
     &__hidden {
         display: none;
     }
@@ -224,9 +227,10 @@ a {
         color: $accent;
         font-family: 'Graphik-Semibold', sans-serif;
         font-weight: 600;
-        img {
+        svg {
+            display: inline-block;
             transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .4s;
-            margin-left: 8px;
+            margin-left: 6px;
         }
     }
 }
