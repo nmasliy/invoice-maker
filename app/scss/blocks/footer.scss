@@ -32,15 +32,19 @@
 
     &__buttons {
         display: flex;
+        margin: -15px;
+        overflow: hidden;
     }
 
     &__btn {
-        display: block;
-        &:last-child {
-            margin-left: 15px;
-        }
+        display: flex;
+        border-radius: 5px;
+        margin: 8px;
+
         img {
-            width: 168px;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
         }
     }
 

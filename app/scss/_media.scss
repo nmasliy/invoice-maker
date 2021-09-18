@@ -1,3 +1,11 @@
+@media (min-width: 1921px) {
+   .reviews-slider {
+      &__item {
+         max-width: 600px;
+      }
+   }
+}
+
 @media (min-width: 1025px) {
    // Hover section
    .btn {
@@ -76,6 +84,9 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .rating {
+      padding-bottom: 70px;
+   }
    .page-head__inner {
       padding: 50px 25px;
    }
@@ -180,10 +191,20 @@
          width: calc(25% - 16px);
          margin: 0 8px;
       }
+      &__buttons {
+         flex-wrap: wrap;
+      }
    }
 }
 
 @media (max-width: 768px) {
+   .reviews-slider {
+      padding: 25px 0;
+      &__item {
+         padding: 25px;
+         min-height: auto;
+      }
+   }
    .footer {
       &__inner {
          flex-direction: column-reverse;
@@ -193,7 +214,8 @@
          margin-right: 0;
       }
       &__nav {
-         width: 100%;
+         width: calc(100% + 16px);
+         overflow: hidden;
          margin: 0 -8px;
          margin-bottom: 40px;
       }
@@ -243,10 +265,29 @@
 } 
 
 @media (max-width: 640px) {
+   .star-rating {
+      &__value {
+         font-size: 60px;
+         line-height: 80px;
+      }
+   }
+   .rating {
+      &__stat {
+         margin-bottom: 30px;
+      }
+      &__download-btn {
+         margin-top: 40px;
+      }
+   }
    .footer {
+      font-size: 17px;
       &__list {
          width: calc(50% - 16px);
          margin-bottom: 30px;
+      }
+      &__btn {
+         max-width: 220px;
+         width: auto;
       }
    }
    .about {
@@ -259,7 +300,29 @@
 // /Tablets 
 
 // Mobile phones
+@media (max-width: 420px) {
+   .reviews-slider {
+      &__item {
+         padding: 25px 15px;
+         box-shadow: 0px 9px 15px rgba(12, 52, 106, 0.1);
+      }
+   }
+}
 @media (max-width: 370px) {
+   .rating {
+      &__download-btn {
+         width: 200px;
+      }
+      &__stat {
+         flex-direction: column;
+      }
+      &__col {
+         margin-bottom: 50px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
    .footer {
       &__inner {
          padding: 50px 0;
