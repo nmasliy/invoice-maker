@@ -8,6 +8,17 @@
 
 // Hover section
 @media (min-width: 1025px) {
+   .pagination {
+      li {
+         transition: all .2s;
+         &:hover {
+            background-color: $lightblue;
+         }
+         &.active:hover {
+            background-color: $accentHover;
+         }
+      }
+   }
    .contacts__email {
       span, svg, path {
          transition: all .2s ease-in;
@@ -125,9 +136,18 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .blog {
+      &__item-wrapper {
+         width: calc(50% - 40px);
+      }
+   }
    .contacts {
       padding-top: 60px;
       padding-bottom: 100px;
+
+      &--support {
+         padding-top: 30px;
+      }
 
       &__divider {
          margin-bottom: 60px;
@@ -341,6 +361,27 @@
 } 
 
 @media (max-width: 640px) {
+   .blog__item img {
+      height: auto;
+      max-height: 500px;
+      width: 100%;
+   }
+   .blog {
+      &__items {
+         margin: 0;
+      }
+      &__item-wrapper {
+         width: 100%;
+         margin: 0;
+         margin-bottom: 60px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+      &__category {
+         margin: 0;
+      }
+   }
    .contacts {
       &__email {
          font-size: 20px;

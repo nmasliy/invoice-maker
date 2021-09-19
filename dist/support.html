@@ -3,14 +3,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Вся вёрстка</title>
+	<title>Support</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-    <header class="header">
+	<div class="page-wrapper">
+		<header class="header">
     <div class="header__banner download-banner">
         <a href="./" class="logo download-banner__logo">
             <img width="180" src="images/dist/logo-square.svg" alt="Invoice Maker">
@@ -61,33 +62,36 @@
     </div>
 </header>
 
-    <div class="page-wrapper">
-        <main class="main" style="margin-top: 100px">
-            <div class="container">
-                <h1>Страницы:</h1>
-                <ul>
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="mobile-apps.html">Mobile apps</a></li>
-                    <li><a href="features.html">Our features</a></li>
-                    <li><a href="feature.html">Feature</a></li>
-                    <li><a href="invoice-generator.html">Invoice Generator</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="support.html">Support</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="article.html">Article</a></li>
-                    <li><a href="terms.html">Terms of Use</a></li>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="cookie.html">Cookie Policy</a></li>
-                    <li><a href="error.html">404 error</a></li>
-                </ul>
-                <h2>Попапы:</h2>
-                <ul>
-                    <li><a href="#">Download app</a></li>
-                </ul>
-            </div>
-    </main>
-</div>
-		<footer class="footer">
+		<main class="main">
+            <section class="contacts contacts--support">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <h1>How can we help you?</h1>
+                        <h5>Got a question? We'd love to hear from you.</h5>
+                        <div class="contacts__form-wrapper">
+                            <form action="#" class="contacts__form">
+                                <input type="email" placeholder="You email">
+                                <input type="text" placeholder="You name">
+                                <textarea placeholder="Your message"></textarea>
+                                <button type="submit" class="btn btn--shadow">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section class="lead">
+    <div class="container">
+        <div class="lead__inner">
+            <h2>Start your free trial today</h2>
+            <h5>Create & download invoices for free</h5>
+            <a href="#" class="btn btn--shadow lead__btn">Create an invoice now</a>
+        </div>
+    </div>
+</section>
+		</main>
+				<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__inner">
 					<div class="footer__info">

@@ -195,6 +195,10 @@ form button {
     width: 100%;
     padding: 0 25px;
     margin: 0 auto;
+
+    &--large {
+        max-width: 1210px;
+    }
 }
 
 .page-wrapper {
@@ -223,7 +227,6 @@ form button {
     border-radius: 7px;
     color: $white;
     min-width: 110px;
-    transition: box-shadow .2s ease-in;
 
     &--round {
         padding: 10px 15px;
@@ -306,4 +309,34 @@ form button {
         color: #B7C1D3;
         text-transform: uppercase;
     }
+}
+
+.pagination {
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+        margin: -7px;
+    }
+    li {
+        margin: 7px;
+        background-color: rgba($text, .03);
+        border-radius: 50%;
+
+        &.active {
+            background-color: $accent;
+            color: $white;
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
 }
