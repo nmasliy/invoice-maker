@@ -2,6 +2,7 @@
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 $blue: rgba(0, 122, 255, 0.1);
 $blueHover: rgba(0, 122, 255, 0.2);
+$lightblue: #E8EDF5;
 $accent: #007AFF;
 $accentHover: rgba(#007AFF, .8);
 $text: #000000;
@@ -11,6 +12,10 @@ $footer:  #25436B;
 $grey: #F4F5F7;
 $phone: #121515;
 $star: #FFA500;
+$inputBorder: #DBDFE6;
+$red: #c51818;
+$green: #2e6f1a;
+
 // GENERAL DOCUMENT STYLES
 input,
 textarea {
@@ -95,6 +100,38 @@ input::-webkit-inner-spin-button {
 }
 // /Input number fix
 
+input, textarea {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid $inputBorder;
+    border-radius: 5px;
+    padding: 14px 12px;
+    margin: 15px 0;
+
+    &::placeholder {
+        color: rgba($text, .4);
+    }
+
+    // Дополнительные классы для валидации
+    &.invalid {
+        color: $red;
+        border-color: $red;
+
+        &::placeholder {
+            color: $red;
+        }
+    }
+    &.valid {
+        color: $green;
+        border-color: $green;
+
+        &::placeholder {
+            color: $green;
+        }
+    }
+}
+
 button {
     outline: transparent;
     cursor: pointer;
@@ -102,6 +139,7 @@ button {
 
 textarea {
     resize: none;
+    min-height: 128px;
 }
 
 picture {
@@ -117,6 +155,27 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+form .btn {
+    min-width: 256px;
+}
+
+form button {
+    display: inline-block;
+    font-family: 'Graphik-Semibold', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: $accent;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: break-spaces;
+    border: none;
+    border-radius: 7px;
+    color: $white;
+    min-width: 110px;
 }
 
 .logo {
@@ -164,6 +223,7 @@ a {
     border-radius: 7px;
     color: $white;
     min-width: 110px;
+    transition: box-shadow .2s ease-in;
 
     &--round {
         padding: 10px 15px;
@@ -180,6 +240,10 @@ a {
         box-shadow: 0px 8px 20px rgba(8, 59, 129, 0.19);
         border-radius: 10px;
         min-width: 292px;
+    }
+
+    &:focus {
+        box-shadow: 0px 3px 7px rgba(8, 59, 129, 0.19);
     }
 }
 
@@ -202,4 +266,44 @@ a {
 
 .align-center {
     text-align: center;
+}
+
+.socials {
+    padding: 15px 0;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 0;
+        list-style: none;
+        margin: -4px;
+    }
+    
+    li {
+        margin: 4px;
+    }
+}
+
+.divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 475px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__line {
+        height: 2px;
+        width: 100%;
+        background-color: #E6E7EA;
+    }
+
+    &__label {
+        flex: 0 0 auto;
+        margin: 0 25px;
+        color: #B7C1D3;
+        text-transform: uppercase;
+    }
 }

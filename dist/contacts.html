@@ -3,14 +3,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Вся вёрстка</title>
+	<title>Invoice Generator</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-    <header class="header">
+	<div class="page-wrapper">
+		<header class="header">
     <div class="header__banner download-banner">
         <a href="./" class="logo download-banner__logo">
             <img width="180" src="images/dist/logo-square.svg" alt="Invoice Maker">
@@ -61,26 +62,66 @@
     </div>
 </header>
 
-    <div class="page-wrapper">
-        <main class="main" style="margin-top: 100px">
-            <div class="container">
-                <h1>Страницы:</h1>
-                <ul>
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="mobile-apps.html">Mobile apps</a></li>
-                    <li><a href="features.html">Our features</a></li>
-                    <li><a href="feature.html">Feature</a></li>
-                    <li><a href="invoice-generator.html">Invoice Generator</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                </ul>
-                <h2>Попапы:</h2>
-                <ul>
-                    <li><a href="#">Download app</a></li>
-                </ul>
-            </div>
-    </main>
-</div>
-		<footer class="footer">
+		<main class="main">
+			<section class="page-head">
+                <div class="page-head__inner">
+                    <h1>Contact us</h1>
+                    <h5>Got a question? We'd love to hear from you.</h5>
+                </div>
+            </section>
+
+            <section class="contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <h2>You can contact us by mail and social networks</h2>
+                        <a class="contacts__email" href="mailto:hello@saldoapps.com">
+                            <svg width="31" height="27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.605 24.207l8.93-8.868a3.89 3.89 0 001.152-2.77c0-1.625-.9-2.514-3.567-5.167l-3.886-3.86C19.562.895 18.667 0 17.031 0a3.942 3.942 0 00-2.789 1.145L2.716 12.592a3.912 3.912 0 00-1.157 2.77 3.892 3.892 0 001.157 2.77l6.117 6.075H.625V27h30v-2.793h-11.02zM16.094 3.259v9.408a1.763 1.763 0 01-.522 1.246 1.79 1.79 0 01-1.255.518H4.844l11.25-11.172zM5.78 17.224h8.536a4.61 4.61 0 003.244-1.336 4.546 4.546 0 001.345-3.221V4.19c.361.344.797.772 1.336 1.308l3.886 3.859c2.63 2.63 2.747 2.914 2.747 3.212a1.114 1.114 0 01-.333.796L15.625 24.207h-2.813l-7.03-6.983z" fill="#C5CBD7"/></svg>
+                            <span>hello@saldoapps.com</span>
+                        </a>
+                        <div class="contacts__socials socials">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.903 21.903"><path d="M2.67 1.211c.682 0 1.216.215 1.604.643s.596.968.624 1.615c0 .639-.218 1.178-.657 1.616-.439.437-1.039.656-1.798.656h-.027c-.741 0-1.328-.219-1.765-.656A2.215 2.215 0 010 3.469c0-.657.238-1.197.718-1.622.48-.424 1.132-.636 1.952-.636zM.287 7.535H4.97v13.156H.287V7.535zm21.616 5.613v7.543h-4.682v-7.036c0-.895-.184-1.612-.55-2.158-.364-.541-.973-.812-1.833-.812-.655 0-1.181.166-1.573.5-.393.332-.678.699-.85 1.102a1.914 1.914 0 00-.11.486 5.633 5.633 0 00-.026.568v7.351H7.568c.02-2.226.031-4.268.031-6.12v-4.464c0-.647-.007-1.199-.018-1.657-.006-.454-.013-.761-.013-.916h4.711v1.863l-.026.054h.026v-.054c.146-.229.333-.468.561-.719.231-.25.507-.484.843-.7.333-.214.734-.39 1.204-.533.473-.141 1.011-.211 1.624-.211.762 0 1.474.116 2.138.349a4.386 4.386 0 011.715 1.096c.481.495.858 1.111 1.132 1.847.273.734.407 1.608.407 2.621z" fill="#030104"/></svg>
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="#">
+                                        <svg height="36" width="36" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg"><path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__divider divider">
+                            <div class="divider__line"></div>
+                            <div class="divider__label">or</div>
+                            <div class="divider__line"></div>
+                        </div>
+                        <div class="contacts__form-wrapper">
+                            <h2>Write us through the feedback form</h2>
+                            <form action="#" class="contacts__form">
+                                <input type="email" placeholder="You email">
+                                <input type="text" placeholder="You name">
+                                <textarea placeholder="Your message"></textarea>
+                                <button type="submit" class="btn btn--shadow">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section class="lead">
+    <div class="container">
+        <div class="lead__inner">
+            <h2>Start your free trial today</h2>
+            <h5>Create & download invoices for free</h5>
+            <a href="#" class="btn btn--shadow lead__btn">Create an invoice now</a>
+        </div>
+    </div>
+</section>
+		</main>
+				<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__inner">
 					<div class="footer__info">

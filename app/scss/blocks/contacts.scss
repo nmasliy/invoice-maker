@@ -1,0 +1,72 @@
+.contacts {
+    padding-top: 115px;
+    padding-bottom: 160px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    &__email {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Graphik-Medium', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 108%;
+        letter-spacing: 0.02em;
+        margin: 15px 0;
+
+        span {
+            display: inline-block;
+            margin-left: 12px;
+        }
+    }
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__divider {
+        margin-bottom: 90px;
+    }
+
+    &__form {
+
+        button {
+            margin-top: 45px;
+        }
+    }
+
+    &__socials {
+        margin-bottom: 75px;
+        margin-top: 30px;
+
+        a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            background-color: $lightblue;
+            border-radius: 50px;
+        }
+
+        svg {
+            width: 49px;
+            height: 49px;
+            margin: auto;
+            padding: 10px;
+            object-fit: cover;
+            fill: $accent;
+
+            path {
+                fill: $accent;
+            }
+        }
+    }
+}
