@@ -6,8 +6,8 @@
    }
 }
 
+// Hover section
 @media (min-width: 1025px) {
-   // Hover section
    .btn {
       transition: background-color .2s;
       &:hover {
@@ -33,8 +33,16 @@
          stroke: $accentHover;
       }
    }
-   // /Hover section
+   .info-block__link:hover {
+      span {
+         color: $accentHover;
+      }
+      path {
+         fill: $accentHover;
+      }
+   }
 }
+// /Hover section
 
 // Laptop
 @media (max-width: 1366px) {
@@ -229,7 +237,7 @@
    }
    .about {
       &__item {
-         margin: 0 -22px 50px -22px;
+         margin: 0 -22px 70px -22px;
       }
    }
 }
@@ -237,13 +245,18 @@
 @media (max-width: 700px) {
    .about {
       &__img {
-         &::before {
-            border-radius: 40px;
-            border-width: 7px;
+         &--border {
+            &::before {
+               border-radius: 40px;
+               border-width: 7px;
+            }
+            img {
+               border-radius: 40px;
+            }
          }
          img {
-            border-radius: 40px;
-            width: 100%;
+            min-width: 60%;
+            margin: 0 auto;
          }
       }
       &__item {
@@ -257,6 +270,7 @@
       &__img-wrapper {
          width: 100%;
          margin: 0;
+         text-align: center;
          margin-bottom: 30px;
       }
       &__info {
@@ -295,8 +309,8 @@
    }
    .about {
       &__item {
-         margin: 0;
-         margin-bottom: 50px;
+         margin-left: 0;
+         margin-right: 0;
       }
    }
 }

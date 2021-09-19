@@ -68,6 +68,7 @@ h1,h2,h3,h4 {
 
 h5,h6 {
     font-weight: 400;
+    font-family: 'Graphik-Regular', sans-serif;
 }
 
 h1 {
@@ -199,39 +200,6 @@ a {
     }
 }
 
-.info-component {
-    &.opened {
-        span.info-block__hidden {
-            display: inline;
-        }
-        .info-block__hidden {
-            display: block;
-        }
-        .info-block__btn svg {
-            transform: rotate(180deg);
-        }
-    }
-}
-.info-block {
-    &__hidden {
-        display: none;
-    }
-
-    &__text {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    &__btn {
-        display: inline-block;
-        margin: 15px 0;
-        color: $accent;
-        font-family: 'Graphik-Semibold', sans-serif;
-        font-weight: 600;
-        svg {
-            display: inline-block;
-            transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .4s;
-            margin-left: 6px;
-        }
-    }
+.align-center {
+    text-align: center;
 }

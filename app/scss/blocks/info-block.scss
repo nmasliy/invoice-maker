@@ -1,0 +1,39 @@
+.info-component {
+    &.opened {
+        span.info-block__hidden {
+            display: inline;
+        }
+        .info-block__hidden {
+            display: block;
+        }
+        .info-block__btn svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.info-block {
+    &__hidden {
+        display: none;
+    }
+
+    &__text {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__btn,
+    &__link {
+        display: inline-block;
+        margin: 15px 0;
+        color: $accent;
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+
+        svg {
+            display: inline-block;
+            margin-left: 6px;
+            transition: transform cubic-bezier(0.215, 0.610, 0.355, 1) .4s;
+        }
+    }
+}

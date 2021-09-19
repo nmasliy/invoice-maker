@@ -1,0 +1,29 @@
+.reviews-slider {
+    padding: 50px 0;
+
+    &__item {
+        min-height: 300px;
+        max-height: 400px;
+        height: auto;
+        overflow: hidden;
+        padding: 55px;
+        background-color: $white;
+        box-shadow: 0px 9px 30px rgba(12, 52, 106, 0.1);
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__rating {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 30px;
+        li + li {
+            margin-left: 3px;
+        }
+    }
+}
