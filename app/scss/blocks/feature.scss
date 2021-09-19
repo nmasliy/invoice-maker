@@ -1,0 +1,44 @@
+.feature {
+    padding-top: 90px;
+    padding-bottom: 150px;
+
+    &__container {
+        max-width: 865px;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    &__subtitle {
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+
+    &__title {
+        max-width: 555px;
+        margin: 0 auto 130px auto;
+    }
+    
+    &__inner {
+        text-align: center;
+    }
+
+    &__images {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+
+    &__img {
+        // Дополнительный ласс, если картинки должны быть закруглены
+        &--round {
+            img {
+                border-radius: 30px;
+            }
+        }
+
+        &--forward {
+            margin-top: 40px;
+            margin-left: -80px;
+        }
+    }
+}
