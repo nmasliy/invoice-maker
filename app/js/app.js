@@ -68,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initReviewsSlider() {
-        if (document.querySelector('reviews-slider')) {
+        const $reviewsSlider = document.querySelector('.reviews-slider');
+        if ($reviewsSlider) {
             const reviewsSlider = new Swiper('.reviews-slider', {
                 loop: true,
                 slidesPerView: 2.5,
@@ -116,8 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 onClose: modal => console.info(`${modal.id} is hidden`), 
                 openClass: 'is-open', 
                 disableScroll: true, 
-                // awaitOpenAnimation: false,
-                // awaitCloseAnimation: false, 
             });
         }
     }
