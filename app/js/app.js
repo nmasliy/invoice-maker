@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import MicroModal from 'micromodal';
 
 document.addEventListener("DOMContentLoaded", function () {
     function initMenu() {
@@ -67,48 +68,64 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initReviewsSlider() {
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: 2.5,
-            spaceBetween: 30,
-            centeredSlides: true,
-            grabCursor: true,
-            slidesOffsetBefore: 500,
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 15,
-                    slidesOffsetBefore: 0,
+        if (document.querySelector('reviews-slider')) {
+            const reviewsSlider = new Swiper('.reviews-slider', {
+                loop: true,
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+                centeredSlides: true,
+                grabCursor: true,
+                slidesOffsetBefore: 500,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 15,
+                        slidesOffsetBefore: 0,
+                    },
+                    420: {
+                        slidesPerView: 1.5,
+                        slidesOffsetBefore: 0,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        slidesOffsetBefore: 0,
+                    },
+                    900: {
+                        slidesOffsetBefore: 0,
+                    },
+                    1280: {
+                        slidesOffsetBefore: 300,
+                        slidesPerView: 2.5,
+                    },
+                    1800: {
+                        slidesOffsetBefore: 380,
+                    },
+                    1921: {
+                        slidesPerView: 'auto',
+                    },
                 },
-                420: {
-                    slidesPerView: 1.5,
-                    slidesOffsetBefore: 0,
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesOffsetBefore: 0,
-                },
-                900: {
-                    slidesOffsetBefore: 0,
-                },
-                1280: {
-                    slidesOffsetBefore: 300,
-                    slidesPerView: 2.5,
-                },
-                1800: {
-                    slidesOffsetBefore: 380,
-                },
-                1921: {
-                    slidesPerView: 'auto',
-                },
-            },
-        });
+            });
+        }
+    }
+
+    function initModals() {
+        const modals = document.querySelectorAll('.modal');
+        if (modals.length > 0) {
+            MicroModal.init({
+                onShow: modal => console.info(`${modal.id} is shown`),
+                onClose: modal => console.info(`${modal.id} is hidden`), 
+                openClass: 'is-open', 
+                disableScroll: true, 
+                // awaitOpenAnimation: false,
+                // awaitCloseAnimation: false, 
+            });
+        }
     }
     
     initMenu();
+    initModals();
     initStarRating()
 
     initToggleVisibleAboutContent();
     initReviewsSlider();
-
 });

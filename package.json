@@ -33,6 +33,7 @@
 		"gulp-ttf2woff2": "^4.0.1",
 		"gulp-webp": "^4.0.1",
 		"jquery": "^3.5.1",
+		"micromodal": "^0.4.6",
 		"normalize.css": "^8.0.1",
 		"rangeslider-pure": "^0.4.11",
 		"swiper": "^6.8.4",
