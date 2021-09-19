@@ -112,6 +112,9 @@
    h2 {
       font-size: 26px;
    }
+   h3 {
+      font-size: 23px;
+   }
    h5 {
       font-size: 19px;
    }
@@ -136,10 +139,22 @@
 
 // Tablets 
 @media (max-width: 1024px) {
-   .blog {
-      &__item-wrapper {
-         width: calc(50% - 40px);
+   .article {
+      padding-top: 40px;
+      padding-bottom: 30px;
+      &__box {
+         margin-bottom: 60px;
       }
+   }
+   .mb-medium {
+      margin-bottom: 30px;
+   }
+   .article-blog {
+      padding-bottom: 70px;
+      padding-top: 35px;
+   }
+   .blog-items__article {
+      width: calc(50% - 40px);
    }
    .contacts {
       padding-top: 60px;
@@ -366,11 +381,10 @@
       max-height: 500px;
       width: 100%;
    }
-   .blog {
-      &__items {
-         margin: 0;
-      }
-      &__item-wrapper {
+   .blog-items {
+      margin: 0;
+
+      &__article {
          width: 100%;
          margin: 0;
          margin-bottom: 60px;
@@ -378,6 +392,9 @@
             margin-bottom: 0;
          }
       }
+   }
+
+   .blog {
       &__category {
          margin: 0;
       }

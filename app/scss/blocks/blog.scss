@@ -43,28 +43,20 @@
     &__items-wrapper {
         margin-bottom: 60px;
     }
+}
+.blog-items {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin: -30px -20px;
 
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        padding-left: 0;
-        margin: -30px -20px;
-    }
-
-    &__item-wrapper {
+    &__article {
         margin: 30px 20px;
         width: calc(33.333% - 40px);
     }
-
-    &__item {
-    
-    }
-
-    &__pagination {
-    }
 }
-
+.blog-items
 .blog-item {
 
     &__img {

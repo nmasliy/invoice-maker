@@ -1,0 +1,31 @@
+.article {
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    &__box {
+        margin-bottom: 90px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        img {
+            width: 100%;
+        }
+        margin-bottom: 60px;
+    }
+
+    li:first-child {
+        margin-top: 15px;
+    }
+}
+
+.article-blog {
+    padding-bottom: 130px;
+    padding-top: 75px;
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+}
