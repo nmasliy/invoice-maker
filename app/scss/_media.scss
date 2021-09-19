@@ -95,6 +95,9 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .info {
+      padding: 75px 0;
+   }
    .feature {
       padding-top: 60px;
       padding-bottom: 90px;
@@ -295,6 +298,20 @@
 } 
 
 @media (max-width: 640px) {
+   .info__item {
+      margin-bottom: 65px;
+   }
+   .info-block {
+      &__col {
+         margin-left: 15px;
+         margin-right: 15px;
+         width: calc(100% - 30px);
+      }
+      &__row {
+         margin-left: -15px;
+         margin-right: -15px;
+      }
+   }
    .star-rating {
       &__value {
          font-size: 60px;
