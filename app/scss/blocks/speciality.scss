@@ -1,0 +1,9 @@
+// Speciality - общее название для всех текстовых информационных секций, как политика конфидинциальности и т.д
+.specialty {
+    padding-top: 90px;
+    padding-bottom: 130px;
+
+    li:first-child {
+        margin-top: 15px;
+    }
+}

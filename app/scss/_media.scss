@@ -139,12 +139,22 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .error {
+      padding: 60px 0;
+      &__title {
+         margin-bottom: 50px;
+      }
+   }
+   .specialty {
+      padding-top: 45px;
+      padding-bottom: 75px;
+   }
    .article {
       padding-top: 40px;
       padding-bottom: 30px;
-      &__box {
-         margin-bottom: 60px;
-      }
+   }
+   .text-box {
+      margin-bottom: 60px;
    }
    .mb-medium {
       margin-bottom: 30px;

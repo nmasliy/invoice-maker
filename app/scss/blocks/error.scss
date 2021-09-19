@@ -1,0 +1,20 @@
+.error {
+    padding-top: 120px;
+    padding-bottom: 140px;
+
+    &__img {
+        margin-bottom: 38px;
+    }
+
+    &__title {
+        margin-bottom: 88px;
+    }
+    
+    &__inner {
+        text-align: center;
+    }
+
+    &__btn {
+        min-width: 272px;
+    }
+}
