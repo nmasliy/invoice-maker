@@ -24,7 +24,7 @@
     max-width: 500px;
     max-height: 100vh;
     border-radius: 4px;
-    overflow-y: auto;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     margin: auto;
@@ -50,6 +50,7 @@
 
 .modal__btn {
     display: flex;
+    justify-content: center;
     margin-bottom: 15px;
     img {
         align-self: flex-start;
@@ -67,6 +68,7 @@
     padding: 50px 30px;
     border-radius: 20px;
     margin-top: 70px;
+    margin-bottom: 30px;
     position: relative;
 }
 
