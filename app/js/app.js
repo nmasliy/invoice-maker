@@ -109,17 +109,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initModals() {
+        let scrollTop;
+
+        // Блокировка скролла для Safari
+        function hideScroll() {
+            document.body.classList.add('block-scroll');
+            scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
+            document.body.style.position = 'fixed';
+            document.body.style.top = -scrollTop + 'px';
+        }
+
+        function showScroll() {
+            document.body.classList.remove('block-scroll');
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
+            window.scroll(0, scrollTop);
+        }
+
         const modals = document.querySelectorAll('.modal');
         if (modals.length > 0) {
             MicroModal.init({
-                onShow: modal => console.info(`${modal.id} is shown`),
-                onClose: modal => console.info(`${modal.id} is hidden`), 
+                onShow: hideScroll,
+                onClose: showScroll, 
                 openClass: 'is-open', 
                 disableScroll: true, 
             });
         }
     }
-    
+
     initMenu();
     initModals();
     initStarRating()

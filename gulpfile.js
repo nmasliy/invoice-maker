@@ -133,6 +133,7 @@ function buildcopy() {
         [
             "{" + sourceFolder + "/js," +  sourceFolder + "/css}/*.min.*",
             sourceFolder + "/images/**/*.*",
+            sourceFolder + "/invoice/**/*.*",
             "!" + sourceFolder + "/images/src/**/*",
             sourceFolder + "/fonts/**/*",
         ],

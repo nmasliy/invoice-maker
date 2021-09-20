@@ -1,0 +1,30 @@
+.pdf-btns-wrapp .btn {
+    background: none;
+    padding: 0;
+    min-width: auto;
+    border-radius: 0;
+}
+
+.input {
+    border-radius: 0;
+}
+
+.invoice-form {
+    padding-top: 90px;
+    .gen-wrap--wrap {
+        margin: 0 auto;
+    }
+    .select-search {
+        ul {
+            padding-left: 0;
+        }
+        li {
+            &:first-child {
+                border-top-color: #2fcc8b;
+                margin-top: 15px;
+            }
+            
+            margin: 0;
+        }
+    }
+}
