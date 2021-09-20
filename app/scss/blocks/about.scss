@@ -88,12 +88,12 @@
         height: 100%;
         z-index: 2;
         border-radius: 30px;
+        padding: 7px 9px;
 
         img {
             display: flex;
             border-radius: 15px;
             object-fit: cover;
-            padding: 7px 10px;
         }
     }
 

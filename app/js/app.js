@@ -1,6 +1,24 @@
 import MicroModal from 'micromodal';
 
 document.addEventListener("DOMContentLoaded", function () {
+    let scrollTop;
+
+    // Блокировка скролла для Safari
+    function hideScroll() {
+        document.body.classList.add('block-scroll');
+        scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
+        document.body.style.position = 'fixed';
+        document.body.style.top = -scrollTop + 'px';
+    }
+
+    function showScroll() {
+        document.body.classList.remove('block-scroll');
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scroll(0, scrollTop);
+    }
+
     function initMenu() {
         const $html = document.querySelector('html');
         const $header = document.querySelector('.header');
@@ -12,6 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
             $headerBtn.classList.toggle('active');
             $header.classList.toggle('active');
             $html.classList.toggle('block-scroll');
+
+            if ($html.classList.contains('block-scroll')) {
+                hideScroll();
+            }
+            else {
+                showScroll();
+            }
         }
 
         const checkScreenWidth = () => {
@@ -109,23 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initModals() {
-        let scrollTop;
-
-        // Блокировка скролла для Safari
-        function hideScroll() {
-            document.body.classList.add('block-scroll');
-            scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
-            document.body.style.position = 'fixed';
-            document.body.style.top = -scrollTop + 'px';
-        }
-
-        function showScroll() {
-            document.body.classList.remove('block-scroll');
-            document.body.style.position = '';
-            document.body.style.width = '';
-            document.body.style.top = '';
-            window.scroll(0, scrollTop);
-        }
+        
 
         const modals = document.querySelectorAll('.modal');
         if (modals.length > 0) {
@@ -138,10 +147,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function disableTransitionsBeforePageLoading() {
+        if (document.body.classList.contains('preload')) {
+            document.body.classList.remove('preload');
+        }
+    }
+
+    disableTransitionsBeforePageLoading();
     initMenu();
     initModals();
     initStarRating()
 
     initToggleVisibleAboutContent();
     initReviewsSlider();
+
 });

@@ -349,3 +349,7 @@ form button {
 .mb-medium {
     margin-bottom: 45px;
 }
+
+.preload * {
+	transition: none !important;
+}
