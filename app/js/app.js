@@ -1,4 +1,3 @@
-import Swiper from 'swiper';
 import MicroModal from 'micromodal';
 
 document.addEventListener("DOMContentLoaded", function () {
