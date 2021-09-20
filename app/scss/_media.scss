@@ -139,6 +139,9 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .modal__container {
+      overflow-y: scroll;
+   }
    .error {
       padding: 60px 0;
       &__title {

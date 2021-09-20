@@ -15,15 +15,17 @@
     z-index: 20;
 }
 
+
 .modal__container {
     border-radius: 20px;
     padding: 25px;
     padding-bottom: 75px;
-    padding-top: 85px;
+    padding-top: 10px;
     max-width: 500px;
     max-height: 100vh;
     border-radius: 4px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     margin: auto;
     width: 100%;
@@ -49,6 +51,9 @@
 .modal__btn {
     display: flex;
     margin-bottom: 15px;
+    img {
+        align-self: flex-start;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -61,7 +66,7 @@
     background-color: $white;
     padding: 50px 30px;
     border-radius: 20px;
-    margin-top: auto;
+    margin-top: 70px;
     position: relative;
 }
 
