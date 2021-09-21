@@ -1,26 +1,36 @@
 import MicroModal from 'micromodal';
 
 document.addEventListener("DOMContentLoaded", function () {
-    let scrollTop;
-
-    // Блокировка скролла для Safari
+    const $html = document.querySelector('html');
+    let scrollTop = window.pageYOffset;
+    
     function hideScroll() {
         document.body.classList.add('block-scroll');
-        scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
-        document.body.style.position = 'fixed';
-        document.body.style.top = -scrollTop + 'px';
+        // Блокировка скролла для Safari
+        if (window.innerWidth <= 1024) {
+            $html.style.scrollBehavior = 'auto';
+            scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
+            document.body.style.position = 'fixed';
+            document.body.style.top = -scrollTop + 'px';
+            $html.style.scrollBehavior = '';
+        }
     }
 
     function showScroll() {
         document.body.classList.remove('block-scroll');
-        document.body.style.position = '';
-        document.body.style.width = '';
-        document.body.style.top = '';
-        window.scroll(0, scrollTop);
+
+        // Блокировка скролла для Safari
+        if (window.innerWidth <= 1024) {
+            $html.style.scrollBehavior = 'auto';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
+            window.scroll(0, scrollTop);
+            $html.style.scrollBehavior = '';
+        }
     }
 
     function initMenu() {
-        const $html = document.querySelector('html');
         const $header = document.querySelector('.header');
         const $headerBtn = document.querySelector('.header__menu-btn');
         const $navigationItems = document.querySelectorAll('.header__navigation ul>li>a');
