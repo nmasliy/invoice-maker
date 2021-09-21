@@ -358,6 +358,9 @@ form button {
 	transition: none !important;
 }
 
-.download-banner__btn img { 
-    border-radius: 6px;
+.download-banner__btn {
+    display: flex;
+    img { 
+        border-radius: 6px;
+    }
 }
