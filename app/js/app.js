@@ -134,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initModals() {
-        
 
         const modals = document.querySelectorAll('.modal');
         if (modals.length > 0) {
