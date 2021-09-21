@@ -45,6 +45,10 @@
         width: calc(50% - 44px);
         margin: 0 22px;
 
+        &--54 {
+            width: calc(54% - 44px);
+        }
+        
         &--pt-small {
             padding-top: 30px;
         }

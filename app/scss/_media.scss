@@ -342,6 +342,9 @@
          width: calc(25% - 16px);
          margin: 0 8px;
       }
+      &__btn img {
+         height: 50px;
+      }
    }
    .about {
       &__item {
