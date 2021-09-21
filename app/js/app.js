@@ -134,14 +134,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initModals() {
+        const $header = document.querySelector('.header');
+        const $modals = document.querySelectorAll('.modal');
+        const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
+        const $modalOverlays = document.querySelectorAll('.modal__overlay');
 
-        const modals = document.querySelectorAll('.modal');
-        if (modals.length > 0) {
+        $modalOverlays.forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                const modalId = overlay.closest('.modal').id;
+                
+                if (e.target.classList.contains('modal__container') || e.target.classList.contains('modal__overlay')) {
+                    MicroModal.close(modalId);
+                }
+            })
+        })
+        
+        $modalsTriggers.forEach(item => {
+            item.addEventListener('click', (e) => e.preventDefault());
+        })
+
+        if ($modals.length > 0) {
             MicroModal.init({
-                onShow: hideScroll,
-                onClose: showScroll, 
+                onShow: (modal) => {
+                    hideScroll();
+                    $header.style.pointerEvents = 'none';
+                },
+                onClose: (modal) => {
+                    showScroll();
+                    setTimeout(() => $header.style.pointerEvents = '', 500)
+                },
+                disableFocus: true,
                 openClass: 'is-open', 
-                disableScroll: true, 
             });
         }
     }
