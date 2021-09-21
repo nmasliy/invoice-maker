@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollTop = window.pageYOffset; // запоминаем текущую прокрутку сверху
             document.body.style.position = 'fixed';
             document.body.style.top = -scrollTop + 'px';
-            document.body.style.height = '100vh';
             $html.style.scrollBehavior = '';
         }
     }
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.style.position = '';
             document.body.style.width = '';
             document.body.style.top = '';
-            document.body.style.height = '';
             window.scroll(0, scrollTop);
             $html.style.scrollBehavior = '';
         }
@@ -44,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
             $html.classList.toggle('block-scroll');
 
             if ($html.classList.contains('block-scroll')) {
-                hideScroll();
+                // hideScroll();
             }
             else {
-                showScroll();
+                // showScroll();
             }
         }
 
