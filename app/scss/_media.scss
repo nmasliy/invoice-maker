@@ -227,7 +227,7 @@
             display: block;
             height: 100%;
             width: 100%;
-            z-index: 3;
+            z-index: 11;
             background-color: $white;
             overflow: auto;
             padding-bottom: 50px;
@@ -485,6 +485,9 @@
    }
 }
 @media (max-width: 370px) {
+   .about__phones-img--google {
+      padding: 9px;
+   }
    .rating {
       &__download-btn {
          width: 200px;
