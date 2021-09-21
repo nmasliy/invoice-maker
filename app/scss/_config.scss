@@ -24,13 +24,10 @@ textarea {
 
 html {
     box-sizing: border-box;
-    height: 100%;
 }
 
-html,
-body {
+html {
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 body {
@@ -192,6 +189,7 @@ form button {
 
 .block-scroll {
     overflow: hidden;
+    height: 100%;
 
     body {
         overflow: hidden;
