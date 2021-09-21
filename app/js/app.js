@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const toggleMenu = () => {
             $headerBtn.classList.toggle('active');
             $header.classList.toggle('active');
-            $html.classList.toggle('block-scroll');
+            $html.classList.toggle('overflow-hidden');
 
             if ($html.classList.contains('block-scroll')) {
                 // hideScroll();

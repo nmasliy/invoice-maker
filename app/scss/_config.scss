@@ -182,13 +182,20 @@ form button {
     display: block;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+
+    body {
+        overflow: hidden;
+    }
+}
+
 .block-scroll {
     overflow: hidden;
 
     body {
         overflow: hidden;
         height: 100%;
-        z-index: 0;
     }
 }
 
