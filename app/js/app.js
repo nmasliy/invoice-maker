@@ -40,13 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
             $headerBtn.classList.toggle('active');
             $header.classList.toggle('active');
             $html.classList.toggle('overflow-hidden');
-
-            if ($html.classList.contains('block-scroll')) {
-                // hideScroll();
-            }
-            else {
-                // showScroll();
-            }
         }
 
         const checkScreenWidth = () => {
