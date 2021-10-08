@@ -19,7 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 25px 25px 25px 30px;
+        padding: 0 25px 0 30px;
         max-width: 1440px;
         margin: 0 auto;
     }
@@ -87,36 +87,51 @@
         display: flex;
         align-items: center;
         margin-left: auto;
-        
+
         ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li.active > ul {
+            display: block;
+        }
+        
+        // Навигация в хедере
+        & > ul {
             display: flex;
             align-items: center;
             list-style: none;
             flex-wrap: wrap;
             margin: 0 -25px;
-            padding-left: 0;
 
             a {
                 display: block;
-                padding-bottom: 5px;
             }
     
-        }
+            & > li {
+                position: relative;
+                margin: 0 25px;
+                padding: 40px 0;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 32px;
+                    height: 2px;
+                    width: 0;
+                    background-color: $accent;
+                    transition: width ease-out .2s;
+                }
 
-        li {
-            position: relative;
-            margin: 0 25px;
-            &::after {
-                position: absolute;
-                content: "";
-                left: 0;
-                bottom: 4px;
-                height: 2px;
-                width: 0;
-                background-color: $accent;
-                transition: width ease-out .2s;
+                // Все вложенные меню по умолчанию скрыты
+                ul {
+                    display: none;
+                }
             }
         }
+
+        
     }
 
     &__buttons {

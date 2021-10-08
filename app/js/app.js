@@ -32,8 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function initMenu() {
         const $header = document.querySelector('.header');
+        const $overlay = document.querySelector('.overlay');
         const $headerBtn = document.querySelector('.header__menu-btn');
-        const $navigationItems = document.querySelectorAll('.header__navigation ul>li>a');
+        const $navigationItems = document.querySelectorAll('.header__navigation>ul>li');
+        const $navigationItemLinks = document.querySelectorAll('.header__navigation>ul>li>a');
+        const ANIMATION_DURATION = 300;
         let isInit = false;
 
         const toggleMenu = () => {
@@ -46,14 +49,51 @@ document.addEventListener("DOMContentLoaded", function () {
             // Активируем меню только на экранах <= 1024
             if (window.innerWidth <= 1024) {
                 $headerBtn.addEventListener('click', toggleMenu);
-                $navigationItems.forEach(item => item.addEventListener('click', toggleMenu));
                 isInit = true;
+            }
+        }
+
+        const initHoversOnMenuItem = () => {
+            if (window.innerWidth > 1024) {
+                $navigationItems.forEach(item => {
+                    item.addEventListener('mouseenter', function(e) {
+                        if (!$overlay.classList.contains('active')) {
+                            $overlay.classList.add('visible');
+
+                            setTimeout(function() {
+                                $overlay.classList.add('active');
+                            }, 1)
+                        }
+                    })
+                })
+                document.body.addEventListener('mousemove', function(e) {
+                    if (!e.target.closest('.header__navigation li') && $overlay.classList.contains('active')) {
+                        $overlay.classList.remove('active');
+                        $overlay.classList.remove('visible')
+                    }
+                })
+            }
+        }
+
+        const initMobileDropdownMenu = () => {
+            if (window.innerWidth <= 1024) {
+                const $menuItems = document.querySelectorAll('.header__navigation ul li a'); 
+                $menuItems.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        if (item.nextElementSibling?.tagName === 'UL') {
+                            e.preventDefault();
+                            item.closest('li').classList.toggle('active');
+                        }
+                    })
+                })
             }
         }
 
         window.addEventListener('resize', checkScreenWidth);
         
         checkScreenWidth();
+        initHoversOnMenuItem();
+        initMobileDropdownMenu();
     }
 
     function initToggleVisibleAboutContent() {

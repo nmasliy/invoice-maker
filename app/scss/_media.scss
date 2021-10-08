@@ -58,9 +58,97 @@
          }
       }
    }
-   .header__navigation li:hover {
+   // Меню хедер
+   .header__navigation {
+      li {
+         transition: .3s ease;
+         margin: 0;
+      }
+      a {
+            transition: .3s ease;
+      }
+      & > ul > li {
+         
+        // Вложенное меню № 1
+         & > ul {
+               position: absolute;
+               left: -30px;
+               top: 100%;
+               width: 255px;
+               padding-top: 1px;
+               padding-right: 1px;
+               z-index: 2;
+               
+               & > li {
+                  position: relative;
+                  background-color: #fff;
+
+                  & > a {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     padding: 30px;
+                     margin-bottom: 1px;
+                     & > svg {
+                           transition: .3s ease;
+                     }
+                  }
+
+                  // Вложенное меню № 2
+                  & > ul {
+                     position: absolute;
+                     right: calc(-100% - 2px);
+                     top: 0;
+                     width: 255px;
+                     background-color: #fff;
+                     z-index: 3;
+                     & > li {
+                           & > a {
+                              display: block;
+                              padding: 10px 30px;
+                           }
+                           &:first-child {
+                              a {
+                                 padding-top: 30px;
+                              }
+                           }
+                           &:last-child {
+                              a {
+                                 padding-bottom: 30px;
+                              }
+                           }
+                     }
+                  }
+               }
+         }
+      }
+   }
+   .header__navigation>ul>li:hover {
+      & > ul {
+         display: block;
+      }
       &::after {
             width: 100%;
+      }
+   }
+   // Вложенное меню № 1
+   .header__navigation>ul>li>ul>li:hover {
+      background-color: $background;
+      & > a {
+         color: $accent;
+         & > svg path {
+            stroke: $accent;
+         }
+      }
+      & > ul {
+         display: block;
+      }
+   }
+   // Вложенное меню № 2
+   .header__navigation>ul>li>ul>li>ul>li:hover {
+      background-color: $background;
+      & > a {
+         color: $accent;
       }
    }
    .hero__btn-label a:hover {
@@ -139,6 +227,51 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .submenu {
+      & > a {
+         position: relative;
+
+         &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 50%;
+            transform: translateX(-50%);
+            background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 0.999999' stroke='%23000000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            width: 7px;
+            height: 10px;
+            transition: .3s ease;
+         }
+      }
+      &.active {
+         a::after {
+            transform: rotate(90deg) translateX(-50%);
+            transition: .3s ease;
+         }
+      }
+   }
+   
+   .header {
+      &__navigation {
+         & > ul > li {
+            padding: 10px 0;
+         }
+         ul a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+      }
+   }
+   .header__navigation>ul>li>ul>li>a>svg {
+      transition: transform .3s ease;
+      path {
+         stroke: $text;
+      }
+   }
+   .header__navigation li.active >a>svg {
+      transform: rotate(90deg);
+   }
    .modal__container {
       overflow-y: scroll;
    }
@@ -233,22 +366,38 @@
             overflow: auto;
             padding-bottom: 50px;
 
-            ul {
+            & > ul {
                font-size: 18px;
                display: block;
                padding-top: 50px;
                margin: 0;
                margin-bottom: 40px;
-               color: $accent;
+               color: $text;
                padding-right: 60px;
 
                a {
-                  padding: 12px 0;
+                  padding: 15px 0;
                }
             }
-            li {
+            & > ul > li {
                margin: 0;
                border-bottom: 1px solid $blue;
+               
+               // Вложенное меню №1
+               & > ul {
+                  padding-left: 5px;
+               }
+               & > ul > li {
+                  color: #112354;
+                  border-bottom: 1px solid $background;
+                  // Вложенное меню №2
+                  & > ul {
+                     padding-left: 5px;
+                  }
+                  & > ul > li {
+                     color: $accent;
+                  }
+               }
             }
          }
       }
