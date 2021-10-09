@@ -218,6 +218,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function initAccordions() {
+        const $accordionsButtons = document.querySelectorAll(".accordion__btn");
+
+        if ($accordionsButtons.length > 0) {
+            $accordionsButtons.forEach(item => {
+                item.addEventListener("click", function() {
+                    this.parentNode.classList.toggle("active");
+                    const content = this.nextElementSibling;
+
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        let contentPadding = this.classList.contains('blog-questions__name') ? 56 : 0; // Паддинги сверху и снизу для корректного вычисления высоты, в других аккордионах паддинги не учитываются
+                        
+                        content.style.maxHeight = content.scrollHeight + contentPadding + "px";
+                    }
+
+                }); 
+            })
+        }
+    }
+
     disableTransitionsBeforePageLoading();
     initMenu();
     initModals();
@@ -225,5 +247,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initToggleVisibleAboutContent();
     initReviewsSlider();
-
+    initAccordions();
 });

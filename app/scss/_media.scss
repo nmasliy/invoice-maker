@@ -319,6 +319,9 @@
          margin-top: 20px;
       }
    }
+   .blog-questions {
+      padding-bottom: 40px;
+   }
    .info {
       padding: 75px 0;
    }
@@ -543,6 +546,17 @@
 } 
 
 @media (max-width: 640px) {
+   .blog-questions {
+      padding-top: 5px;
+      &__name {
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+      &__answer {
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+   }
    .blog__item img {
       height: auto;
       max-height: 500px;

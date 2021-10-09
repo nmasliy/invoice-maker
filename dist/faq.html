@@ -3,14 +3,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>All pages</title>
+	<title>Blog FAQ</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
-<body>
-    <header class="header">
+<body class="preload">
+	<div class="page-wrapper">
+		<header class="header">
     <!-- Banner google play -->
     <div class="header__banner download-banner">
         <a href="./" class="logo download-banner__logo">
@@ -122,44 +123,115 @@
     </div>
 </header>
 
-    <div class="page-wrapper">
-        <main class="main">
-            <section class="specialty">
-                <div class="container">
-                    <h1>Страницы:</h1>
-                    <ul>
-                        <li><a href="index.html">Index</a></li>
-                        <li><a href="mobile-apps.html">Mobile apps</a></li>
-                        <li><a href="features.html">Our features</a></li>
-                        <li><a href="feature.html">Feature</a></li>
-                        <!-- <li><a href="invoice-generator.html">Invoice Generator</a></li> -->
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="article.html">Article</a></li>
-                        <li><a href="terms.html">Terms of Use</a></li>
-                        <li><a href="policy.html">Privacy Policy</a></li>
-                        <li><a href="cookie.html">Cookie Policy</a></li>
-                        <li><a href="error.html">404 error</a></li>
-                    </ul>
-                    <h2>Новые страницы:</h2>
-                    <ul>
-                        <li>
-                            <a href="faq.html">Blog (FAQ)</a>
-                            <p>На странице блога присутствует аккордеон, код будет работать и если на страницу добавить несколько аккордеонов.
-                                Класс для кнопки: accordion__btn. Класс для скрытого контента: accordion__content
-                            </p>
-                        </li>
-                    </ul>
-                    <h2>Попапы:</h2>
-                    <ul>
-                        <li><button data-micromodal-trigger="modal-download">Download app</button></li>
-                    </ul>
+		<main class="main">
+			<section class="page-head">
+                <div class="page-head__inner">
+                    <h1>Blog</h1>
+                    <div class="page-head__text">Invoice Maker is an online invoice generator – an innovative business tool you can use for creating invoices online</div>
                 </div>
             </section>
-    </main>
-</div>
-		<footer class="footer">
+
+            <section class="blog">
+                <div class="container container--large">
+                    <div class="blog__inner">
+                        <ul class="blog__categories">
+                            <li class="blog__category-wrapper"><a class="blog__category" href="#">Articles</a></li>
+                            <li class="blog__category-wrapper"><a href="#" class="blog__category">How to</a></li>
+                            <li class="blog__category-wrapper active"><a href="#" class="blog__category">FAQ</a></li>
+                            <li class="blog__category-wrapper"><a href="#" class="blog__category">News</a></li>
+                        </ul>
+                        <div class="blog__questions blog-questions">
+                            <h3>Frequently Asked Questions</h3>
+                            <ul class="blog-questions__list">
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I reset my password?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I change the invoice template?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I delete an invoice?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I change my email?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I convert an Estimate to an Invoice?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I copy or duplicate an invoice for quicker invoicing?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How can I mark an invoice as 'Paid' manually?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I incorporate a discount or advance payment into my invoice?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                            </ul>
+                                <li class="blog-questions__item">
+                                    <h4 class="blog-questions__name accordion__btn">
+                                        <span>How do I print an invoice?</span>
+                                        <img src="images/dist/arrow.svg" alt="">
+                                    </h4>
+                                    <div class="blog-questions__answer accordion__content">
+                                        To change the template of an invoice, please click on the saved invoice which you would like to edit, then choose 'Select Template'
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</main>
+				<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__inner">
 					<div class="footer__info">
