@@ -1,0 +1,45 @@
+.plan {
+    background: url('../images/dist/plan-bg.svg') center / cover no-repeat;
+    padding-top: 120px;
+    padding-bottom: 90px;
+
+    &__inner {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__price {
+        font-size: 76px;
+        line-height: 120%;
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+    }
+
+    &__price-caption {
+        font-family: 'Graphik-Medium', sans-serif;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 130%;
+        margin-bottom: 20px;
+    }
+
+    &__caption {
+        display: block;
+        color: $accent;
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+    }
+}

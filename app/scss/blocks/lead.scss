@@ -2,6 +2,10 @@
     background-color: rgba($text, .02);
     padding: 95px 0;
 
+    &--grey {
+        background-color: rgba($grey, .02);
+    }
+
     &__inner {
         text-align: center;
     }

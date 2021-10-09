@@ -1,0 +1,50 @@
+.plan-benefits {
+    padding-top: 75px;
+    padding-bottom: 105px;
+    background-color: $grey;
+
+    h2 {
+        margin-bottom: 90px;
+        text-align: center;
+    }
+
+    &__list {
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        column-gap: 45px;
+        row-gap: 40px;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-rows: 125px auto minmax(100px, max-content);
+        text-align: center;
+        margin: 0;
+        row-gap: 15px;
+        &:not(:first-child) {
+            .plan-benefits__img {
+                margin-top: 15px;
+                height: 110px;
+            }
+        }        
+    }
+
+    &__img {
+        height: 125px;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        max-width: 190px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        align-self: self-start;
+    }
+}
