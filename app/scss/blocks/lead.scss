@@ -2,6 +2,10 @@
     background-color: rgba($text, .02);
     padding: 95px 0;
 
+    &--default {
+        background-color: $background;
+    }
+
     &--grey {
         background-color: rgba($grey, .02);
     }

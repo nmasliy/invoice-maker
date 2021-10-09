@@ -209,6 +209,11 @@
 }
 
 @media (max-width: 1200px) {
+   .templates {
+      &__item {
+            width: calc(33.333% - 40px);
+      }
+   }
    .header {
       min-height: 80px;
       &__inner {
@@ -227,6 +232,13 @@
 
 // Tablets 
 @media (max-width: 1024px) {
+   .templates {
+      padding-top: 40px;
+      padding-bottom: 60px;
+   }
+   .invoice-templates__content {
+      max-width: 380px;
+   }
    .about-reviews {
       padding-top: 90px;
    }
@@ -483,7 +495,27 @@
    }
 }
 
+@media (max-width: 850px) {
+   .templates {
+      &__item {
+         width: calc(50% - 40px);
+      }
+   }
+}
+
 @media (max-width: 768px) {
+   .invoice-templates {
+      &__inner {
+         flex-direction: column;
+      }
+      &__content {
+         max-width: 100%;
+         margin-bottom: 50px;
+      }
+      &__img {
+         margin: 0 auto;
+      }
+   }
    .about-desc {
       padding-bottom: 40px;
       padding-top: 50px;
@@ -584,6 +616,20 @@
 } 
 
 @media (max-width: 640px) {
+   .templates {
+      &__item {
+         width: 100%;
+         margin-left: 0;
+         margin-right: 0;
+      }
+      &__list {
+         margin: 0;
+      }
+      &__link {
+         width: 100%;
+         justify-content: center;
+      }
+   }
    .about-benefits {
       padding: 25px 0;
       &__list {
