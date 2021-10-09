@@ -1,0 +1,83 @@
+.about-desc {
+    padding-top: 90px;
+    padding-bottom: 80px;
+
+    &__head {
+        text-align: center;
+        margin-bottom: 115px;
+        padding: 0 20px;
+    }
+    &__text {
+        max-width: 575px;
+        margin: 0 auto;
+    }
+    .about__img {
+        img {
+            display: flex;
+            max-height: 350px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.about-benefits {
+    padding: 90px 0;
+    background: url('../images/dist/plan-bg.svg') center / cover no-repeat;
+    background-color: $grey;
+
+    &__head {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        margin: -30px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc(33.333% - 60px);
+        margin: 30px;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 110%;
+        margin-bottom: 44px;
+        color: $accent;
+    }
+
+    &__subtitle {
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    &__head-text {
+        max-width: 575px;
+        margin: 0 auto;
+    }
+}
+.about-reviews {
+    padding-top: 180px;
+
+    &__head {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    &__text {
+        max-width: 575px;
+        margin: 0 auto;
+    }
+
+}
