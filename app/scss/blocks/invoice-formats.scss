@@ -1,0 +1,60 @@
+.invoice-formats {
+    padding-bottom: 150px;
+    
+    &__inner {
+    }
+
+    &__head {
+        margin-bottom: 20px;
+    }
+
+    &__head-text {
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 44px 0;
+        margin-bottom: 30px;
+        padding-right: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            padding-left: 40px;
+        }
+    }
+
+    &__box {
+        max-width: 450px;
+    }
+
+    &__text {
+        margin-bottom: 45px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $accent;
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+
+        img {
+            display: inline-block;
+            margin-left: 12px;
+        }
+    }
+
+    &__img {
+    }
+}

@@ -3,11 +3,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Word Invoice</title>
+	<title>PDF Invoice</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	<link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito"/>
+    <title>Invoice Generator</title>
+    <link href="invoice/static/css/2.0d77bc6e.chunk.css" rel="stylesheet" />
+    <link href="invoice/static/css/main.f45786d6.chunk.css" rel="stylesheet" />
 </head>
 <body class="preload">
 	<div class="page-wrapper">
@@ -126,36 +130,16 @@
 		<main class="main">
 			<section class="page-head">
                 <div class="page-head__inner">
-                    <h1>Word Invoice</h1>
+                    <h1>PDF Invoice</h1>
                     <div class="page-head__text">
-                        Create, save and send invoices online in a single click. <br>
-                        Invoice Maker by Saldo Apps.
+                        Create, save and send invoices online in a single click. <br/> Invoice Maker by Saldo Apps.
                     </div>
-                    <a href="#" class="page-head__btn btn btn--shadow">Create an invoice now</a>
                 </div>
             </section>
 
-            <section class="basic-templates">
-                <div class="container">
-                    <div class="basic-templates__inner">
-                        <div class="basic-templates__content">
-                            <h2>Free downloadable invoice templates</h2>
-                            <div class="basic-templates__text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mi ultrices felis interdum condimentum. Nam elementum arcu sit amet neque gravida ornare. Etiam bibendum sodales mollis. 
-                            </div>
-                            <a href="#" class="btn btn--shadow">Download invoice</a>
-                        </div>
-                        <div class="basic-templates__img basic-templates__img--small">
-                            <div class="basic-templates__img-item">
-                                <img width="113" src="images/dist/invoice-word.svg" alt="word">
-                            </div>
-                            <picture>
-                                <source srcset="images/dist/invoice-template.webp 1x, images/dist/invoice-template@2x.webp 2x">
-                                <img src="images/dist/invoice-template.png" srcset="images/dist/invoice-template.png 1x, images/dist/invoice-template@2x.png 2x" alt="invoice">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
+            <section class="invoice-form">
+                <noscript>You need to enable JavaScript to run this app.</noscript>
+                <div id="root"></div>
             </section>
 
             <section class="info">
@@ -165,7 +149,7 @@
                             <li class="info-component info__item">
 								<div class="info-block">
 									<div class="info-block__content">
-										<h2>How to use basic invoice template?</h2>
+										<h2>How to create an invoice using&nbsp;the invoice generator?</h2>
                                         <div class="info-block__row">
                                             <div class="info-block__text info-block__col">
                                                 <p>Billing documents are an important part of the relationship between suppliers and their clients. To help you do your job efficiently and not spend a lot of time invoicing customers, we've developed Invoice Maker.</p>
@@ -195,37 +179,84 @@
                             <li class="info-component info__item">
 								<div class="info-block">
 									<div class="info-block__content">
-										<h2>What information included in basic invoice sample?</h2>
+										<h2>Is invoice generator safe?</h2>
                                         <div class="info-block__row">
-                                            <div class="info-block__text info-block__col">
-                                                <p>It is simple to customize a doc following a specific orderer or tasks performed. Turn the invoice template into an estimate and vice versa in one click. They look similar, but you may change the color and format if you want. We offer several commonly used formats: PDF, Excel, Word, etc. Choose the one that is best for your customer.
-                                            </p>
-                                            </div>
                                             <div class="info-block__text info-block__col">
                                                 <p>It is simple to customize a doc following a specific orderer or tasks performed. Turn the invoice template into an estimate and vice versa in one click. They look similar, but you may change the color and format if you want. We offer several commonly used formats: PDF, Excel, Word, etc. Choose the one that is best for your customer.</p>
-                                            </div>
-                                        </div>
-									</div>
-								</div>
-							</li>
-                            <li class="info-component info__item">
-								<div class="info-block">
-									<div class="info-block__content">
-										<h2>When it is best to fill in basic invoices?</h2>
-                                        <div class="info-block__row">
-                                            <div class="info-block__text info-block__col">
-                                                <p>
-                                                    Preview the finished text for typos and errors before submitting it to a recipient. If everything is in order, send the invoice for free via email, share a link to it, print it, or save it to your device without leaving the account. When you transfer papers using a link, you may track the status through the application. This way, you can find out whether a customer has read files...
-                                                </p>
                                                 <div class="info-block__hidden">
                                                     <p>Authorized users can make their own basic invoice template and change it for each new client. Since our platform remembers the data you put and substitutes it in the following documents, you'll save time filling out paperwork and spend it on more important matters.</p>
                                                     <p>With this free software invoice samples, which you prepared in advance, can be adjusted, sent, or saved locally on any device convenient for you, provided that you have access to the Internet. To further speed up administrative work, manually set up your orderer base or import details from contacts into your smartphone or laptop.</p>
                                                 </div>
                                             </div>
                                             <div class="info-block__text info-block__col">
-                                                <p>
-                                                    Preview the finished text for typos and errors before submitting it to a recipient. If everything is in order, send the invoice for free via email, share a link to it, print it, or save it to your device without leaving the account. When you transfer papers using a link, you may track the status through the application. This way, you can find out whether a customer has read files...
-                                                </p>
+                                                <p>It is simple to customize a doc following a specific orderer or tasks performed. Turn the invoice template into an estimate and vice versa in one click. They look similar, but you may change the color and format if you want. We offer several commonly used formats: PDF, Excel, Word, etc. Choose the one that is best for your customer.</p>
+                                            </div>
+                                        </div>
+									</div>
+									<a href="#" class="info-block__btn">
+										<span>Show more</span>
+										<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.5 1L7.5 7L13.5 1" stroke="#007AFF" stroke-width="2" stroke-linecap="round"/>
+										</svg>
+									</a>
+								</div>
+							</li>
+                            <li class="info-component info__item">
+								<div class="info-block">
+									<div class="info-block__content">
+										<h2>Essential elements of an invoice</h2>
+                                        <h4>With Invoice Maker, it's easy <br> to form professional-looking invoices for free:</h4>
+                                        <div class="info-block__row">
+                                            <div class="info-block__text info-block__col">
+                                                <ul>
+                                                    <li>Add your company logo and specify the invoice details: number, creation date, and due date;</li>
+                                                    <li>Fill in the information about who provided goods</li>
+                                                    <li>We offer several commonly used formats: PDF, Excel,</li>
+                                                </ul>
+                                                <div class="info-block__hidden">
+                                                    <ul>
+                                                        <li>Add your company logo and specify the invoice details: number, creation date, and due date;</li>
+                                                        <li>Fill in the information about who provided goods</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="info-block__text info-block__col">
+                                                <ul>
+                                                    <li>Add your company logo and specify the invoice details: number, creation date, and due date;</li>
+                                                    <li>Fill in the information about who provided goods</li>
+                                                    <li>We offer several commonly used formats: PDF, Excel,</li>
+                                                </ul>
+                                                <div class="info-block__hidden">
+                                                    <ul>
+                                                        <li>Add your company logo and specify the invoice details: number, creation date, and due date;</li>
+                                                        <li>Fill in the information about who provided goods</li>
+                                                        <li>We offer several commonly used formats: PDF, Excel,</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+									</div>
+									<a href="#" class="info-block__btn">
+										<span>Show more</span>
+										<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.5 1L7.5 7L13.5 1" stroke="#007AFF" stroke-width="2" stroke-linecap="round"/>
+										</svg>
+									</a>
+								</div>
+							</li>
+                            <li class="info-component info__item">
+								<div class="info-block">
+									<div class="info-block__content">
+										<h2>Why making an invoice with&nbsp;generator is the best choice?</h2>
+                                        <div class="info-block__row">
+                                            <div class="info-block__text info-block__col">
+                                                <p>Preview the finished text for typos and errors before submitting it to a recipient. If everything is in order, send the invoice for free via email, share a link to it, print it, or save it to your device without leaving the account. When you transfer papers using a link, you may track the status through the application. This way, you can find out whether a customer has read files...</p>
+                                                <div class="info-block__hidden">
+                                                    <p>With this free software invoice samples, which you prepared in advance, can be adjusted, sent, or saved locally on any device convenient for you, provided that you have access to the Internet. To further speed up administrative work, manually set up your orderer base or import details from contacts into your smartphone or laptop.</p>
+                                                </div>
+                                            </div>
+                                            <div class="info-block__text info-block__col">
+                                                <p>Preview the finished text for typos and errors before submitting it to a recipient. If everything is in order, send the invoice for free via email, share a link to it, print it, or save it to your device without leaving the account. When you transfer papers using a link, you may track the status through the application. This way, you can find out whether a customer has read files...</p>
                                             </div>
                                         </div>
 									</div>
@@ -241,93 +272,7 @@
                     </div>
                 </div>
             </section>
-
-            <section class="templates">
-                <div class="container container--large">
-                    <div class="templates__inner">
-                        <h2>Also you can find more Basic Invoice Templates</h2>
-                        <ul class="templates__list">
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-1.svg" alt="Printable Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Printable <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-2.svg" alt="Blank Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Blank <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-3.svg" alt="Hourly Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Hourly <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-4.svg" alt="Pro Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Pro <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-5.svg" alt="Services Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Services <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-6.svg" alt="Bussiness Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Bussiness <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="templates__item">
-                                <a href="#" class="templates__link">
-                                    <div class="templates__icon">
-                                        <img src="images/dist/templates-icon-7.svg" alt="Customize Invoice Template">
-                                    </div>
-                                    <div class="templates__name">
-                                        <span>Customize <br> Invoice Template</span>
-                                        <img src="images/dist/arrow-top-right.svg" alt="Перейти">
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            
             <section class="lead lead--default">
     <div class="container">
         <div class="lead__inner">
@@ -338,7 +283,7 @@
     </div>
 </section>
 		</main>
-				<footer class="footer">
+        <footer class="footer">
 			<div class="footer__container">
 				<div class="footer__inner">
 					<div class="footer__info">
@@ -352,15 +297,13 @@
 							<a class="footer__btn" href="#">
 								<picture>
 									<source srcset="images/dist/app-store.webp 1x, images/dist/app-store@2x.webp 2x" type="image/webp">
-									<source srcset="images/dist/app-store.png 1x, images/dist/app-store@2x.png 2x" type="image/png">
-									<img width="168" src="images/dist/app-store.png" alt="Download on the app store">
+									<img width="168" src="images/dist/app-store.png" srcset="images/dist/app-store.png 1x, images/dist/app-store@2x.png 2x" alt="Download on the app store">
 								</picture>
 							</a>
 							<a class="footer__btn" href="#">
 								<picture>
 									<source srcset="images/dist/google-play.webp 1x, images/dist/google-play@2x.webp 2x" type="image/webp">
-									<source srcset="images/dist/google-play.png 1x, images/dist/google-play@2x.png 2x" type="image/png">
-									<img width="167" src="images/dist/google-play.png" alt="Get it on google play">
+									<img width="167" src="images/dist/google-play.png" srcset="images/dist/google-play.png 1x, images/dist/google-play@2x.png 2x" alt="Get it on google play">
 								</picture>
 							</a>
 						</div>
@@ -406,7 +349,6 @@
 				</div>
 			</div>
 		</footer>
-		<div class="overlay"></div>
 	</div>
 	<div class="modal micromodal-slide" id="modal-download">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -435,6 +377,116 @@
         </div>
     </div>
 </div>
+    <script>
+        !(function (e) {
+            function r(r) {
+                for (
+                    var n, i, l = r[0], a = r[1], f = r[2], p = 0, s = [];
+                    p < l.length;
+                    p++
+                )
+                    (i = l[p]),
+                        Object.prototype.hasOwnProperty.call(o, i) &&
+                            o[i] &&
+                            s.push(o[i][0]),
+                        (o[i] = 0);
+                for (n in a)
+                    Object.prototype.hasOwnProperty.call(a, n) &&
+                        (e[n] = a[n]);
+                for (c && c(r); s.length; ) s.shift()();
+                return u.push.apply(u, f || []), t();
+            }
+            function t() {
+                for (var e, r = 0; r < u.length; r++) {
+                    for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+                        var a = t[l];
+                        0 !== o[a] && (n = !1);
+                    }
+                    n && (u.splice(r--, 1), (e = i((i.s = t[0]))));
+                }
+                return e;
+            }
+            var n = {},
+                o = { 1: 0 },
+                u = [];
+            function i(r) {
+                if (n[r]) return n[r].exports;
+                var t = (n[r] = { i: r, l: !1, exports: {} });
+                return (
+                    e[r].call(t.exports, t, t.exports, i),
+                    (t.l = !0),
+                    t.exports
+                );
+            }
+            (i.m = e),
+                (i.c = n),
+                (i.d = function (e, r, t) {
+                    i.o(e, r) ||
+                        Object.defineProperty(e, r, {
+                            enumerable: !0,
+                            get: t,
+                        });
+                }),
+                (i.r = function (e) {
+                    "undefined" != typeof Symbol &&
+                        Symbol.toStringTag &&
+                        Object.defineProperty(e, Symbol.toStringTag, {
+                            value: "Module",
+                        }),
+                        Object.defineProperty(e, "__esModule", {
+                            value: !0,
+                        });
+                }),
+                (i.t = function (e, r) {
+                    if ((1 & r && (e = i(e)), 8 & r)) return e;
+                    if (4 & r && "object" == typeof e && e && e.__esModule)
+                        return e;
+                    var t = Object.create(null);
+                    if (
+                        (i.r(t),
+                        Object.defineProperty(t, "default", {
+                            enumerable: !0,
+                            value: e,
+                        }),
+                        2 & r && "string" != typeof e)
+                    )
+                        for (var n in e)
+                            i.d(
+                                t,
+                                n,
+                                function (r) {
+                                    return e[r];
+                                }.bind(null, n)
+                            );
+                    return t;
+                }),
+                (i.n = function (e) {
+                    var r =
+                        e && e.__esModule
+                            ? function () {
+                                  return e.default;
+                              }
+                            : function () {
+                                  return e;
+                              };
+                    return i.d(r, "a", r), r;
+                }),
+                (i.o = function (e, r) {
+                    return Object.prototype.hasOwnProperty.call(e, r);
+                }),
+                (i.p = "./");
+            var l = (this["webpackJsonpinvoice-generator"] =
+                    this["webpackJsonpinvoice-generator"] || []),
+                a = l.push.bind(l);
+            (l.push = r), (l = l.slice());
+            for (var f = 0; f < l.length; f++) r(l[f]);
+            var c = a;
+            t();
+        })([]);
+    </script>
+    <script src="invoice/static/js/2.af0b6f39.chunk.js"></script>
+    <script src="invoice/static/js/main.7565bbd6.chunk.js"></script>
+
 	<script src="js/swiper-bundle.min.js"></script>
 	<script type="module" src="js/app.min.js"></script>
 </body>

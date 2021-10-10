@@ -3,6 +3,14 @@
     padding-bottom: 120px;
     background-color: rgba($text, .02);
 
+    &--transparent {
+        background-color: transparent;
+    }
+
+    .container--large {
+        max-width: 1190px;
+    }
+
     h2 {
         max-width: 552px;
         margin: 0 auto;
@@ -15,13 +23,13 @@
         list-style: none;
         padding-left: 0;
         flex-wrap: wrap;
-        margin: 0 -20px;
+        margin: 0 -30px;
     }
 
     &__item {
-        margin: 0 20px;
+        margin: 0 30px;
         margin-bottom: 45px;
-        width: calc(25% - 40px);
+        width: calc(25% - 60px);
     }
 
     &__link {
@@ -43,4 +51,28 @@
         }
     }
 
+    &__bottom-caption {
+        margin-top: 15px;
+        text-align: center;
+        font-family: 'Graphik-Semibold', sans-serif;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 120%;
+
+        a {
+            color: $accent;
+        }
+    }
+}
+
+.invoice-templates {
+    .about__item {
+        margin-bottom: 110px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__head {
+        margin-bottom: 100px;
+    }
 }

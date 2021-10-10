@@ -1,0 +1,49 @@
+.invoice-categories {
+    &__head {
+        max-width: 600px;
+        margin-bottom: 90px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        list-style: none;
+        margin: 0 -30px;
+        overflow: hidden;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 30px;
+        width: calc(33.333% - 60px);
+    }
+
+    &__img {
+        flex-shrink: 0;
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+
+    &__content {
+        max-width: 230px;
+        h4 {
+            margin-top: 0;
+        }
+    }
+
+    &__caption {
+        font-family: 'Graphik-Medium', sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        margin-top: 90px;
+        text-align: center;
+
+        a {
+            color: $accent;
+            font-family: 'Graphik-Semibold', sans-serif;
+            font-weight: 600;
+        }
+    }
+}

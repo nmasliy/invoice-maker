@@ -1,4 +1,4 @@
-.invoice-templates {
+.basic-templates {
     padding-top: 90px;
     padding-bottom: 35px;
 
@@ -44,7 +44,7 @@
     &__item {
         margin: 15px;
         &:nth-child(2) {
-            .invoice-templates__name {
+            .basic-templates__name {
                 margin-left: 8px;
             }
         }
