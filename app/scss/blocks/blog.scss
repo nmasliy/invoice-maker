@@ -72,7 +72,7 @@
 }
 
 .blog-questions {
-    padding-top: 25px;
+    padding-top: 5px;
     padding-bottom: 90px;
 
     h3 {
@@ -88,8 +88,10 @@
 
     &__item {
         margin-bottom: 5px;
+        margin-top: 0;
         border: 1px solid $questionsBorder;
         list-style: none;
+        background-color: $white;
         &:last-child {
             margin-bottom: 0;
         }
@@ -99,7 +101,7 @@
                 &__name {
                     border-color: $questionsBorder;
                     img {
-                        transform: rotate(90deg);
+                        transform: rotate(180deg);
                     }
                 }
                 &__answer {

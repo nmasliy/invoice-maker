@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const $overlay = document.querySelector('.overlay');
         const $headerBtn = document.querySelector('.header__menu-btn');
         const $navigationItems = document.querySelectorAll('.header__navigation>ul>li');
+        const $submenus = document.querySelectorAll('.submenu');
         const $navigationItemLinks = document.querySelectorAll('.header__navigation>ul>li>a');
         const ANIMATION_DURATION = 300;
         let isInit = false;
@@ -54,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const initHoversOnMenuItem = () => {
-            if (window.innerWidth > 1024) {
-                $navigationItems.forEach(item => {
+            if (window.innerWidth > 1024 && $submenus.length > 0) {
+                $submenus.forEach(item => {
                     item.addEventListener('mouseenter', function(e) {
                         if (!$overlay.classList.contains('active')) {
                             $overlay.classList.add('visible');

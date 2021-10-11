@@ -20,10 +20,21 @@
         }
     }
 
+    &__title-wrapper {
+        text-align: center;
+    }
+
     &__title {
+        display: inline-block;
         margin-top: 0;
         margin-bottom: 30px;
         text-align: center;
+        border-bottom: 4px solid transparent;
+        padding-bottom: 10px;
+
+        &.active {
+            border-color: $accent;
+        }
     }
 
     &__list {
@@ -36,6 +47,7 @@
     }
 
     &__item {
+        position: relative;
         margin: 5px;
         width: calc(33.333% - 10px);
         border-radius: 7px;
