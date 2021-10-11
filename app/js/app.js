@@ -107,10 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     const [SHOW_MORE, SHOW_LESS] = ['Show more', 'Show less'];
                     const parent = this.closest('.info-component');
                     const buttonText = btn.querySelector('span');
-
+                    
                     if (parent.classList.contains('opened')) {
+                        const element = btn.closest('.info-component');
+
                         parent.classList.remove('opened');
                         buttonText.textContent = SHOW_MORE;
+                        
+                        element.scrollIntoView({block: "center"});
                     } else {
                         parent.classList.add('opened');
                         buttonText.textContent = SHOW_LESS;
