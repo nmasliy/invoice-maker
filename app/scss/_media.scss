@@ -186,6 +186,11 @@
          fill: $accentHover;
       }
    }
+
+   .categories__title:hover::after {
+      width: 100%;
+   }
+
 }
 // /Hover section
 

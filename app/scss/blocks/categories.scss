@@ -2,6 +2,10 @@
     padding-top: 90px;
     padding-bottom: 135px;
 
+    &--grey {
+        background-color: rgba($text, .02);
+    }
+
     &__box {
         margin-bottom: 85px;
         &:last-child {
@@ -25,15 +29,22 @@
     }
 
     &__title {
+        position: relative;
         display: inline-block;
         margin-top: 0;
         margin-bottom: 30px;
         text-align: center;
-        border-bottom: 4px solid transparent;
         padding-bottom: 10px;
 
-        &.active {
-            border-color: $accent;
+        &::after {
+            position: absolute;
+            transition: .3s ease;
+            content: "";
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 0;
+            background-color: $accent;
         }
     }
 
@@ -51,7 +62,7 @@
         margin: 5px;
         width: calc(33.333% - 10px);
         border-radius: 7px;
-        background: rgba(255, 255, 255, 0.03);
+        background-color: $white;
         border: 1px solid #EAEAF2;
     }
 
