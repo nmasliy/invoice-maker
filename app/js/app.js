@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         parent.classList.remove('opened');
                         buttonText.textContent = SHOW_MORE;
                         
-                        element.scrollIntoView({block: "center"});
+                        element.scrollIntoView({block: "center", behavior: "auto"});
                     } else {
                         parent.classList.add('opened');
                         buttonText.textContent = SHOW_LESS;
